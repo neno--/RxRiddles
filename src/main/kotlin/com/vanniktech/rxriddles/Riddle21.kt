@@ -8,7 +8,5 @@ object Riddle21 {
    *
    * Use case: Sometimes you can't do everything reactively and need to break out of it.
    */
-  fun solve(source: Observable<Int>): Int {
-    TODO()
-  }
+  fun solve(source: Observable<Int>): Int = source.blockingFirst()
 }
