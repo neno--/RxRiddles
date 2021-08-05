@@ -8,7 +8,5 @@ object Riddle28 {
    *
    * Use case: Add some logging.
    */
-  fun solve(source: Completable, function: () -> Unit): Completable {
-    TODO()
-  }
+  fun solve(source: Completable, function: () -> Unit): Completable = source.doOnComplete(function)
 }

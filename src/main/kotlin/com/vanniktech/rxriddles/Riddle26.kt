@@ -1,6 +1,7 @@
 package com.vanniktech.rxriddles
 
 import io.reactivex.rxjava3.core.Observable
+import java.util.concurrent.TimeUnit
 
 object Riddle26 {
   /**
@@ -8,7 +9,5 @@ object Riddle26 {
    *
    * Use case: Delay emission of events to simulate some indication.
    */
-  fun solve(source: Observable<Long>): Observable<Long> {
-    TODO()
-  }
+  fun solve(source: Observable<Long>): Observable<Long> = source.delay(300, TimeUnit.MILLISECONDS)
 }
