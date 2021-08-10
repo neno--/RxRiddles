@@ -1,6 +1,7 @@
 package com.vanniktech.rxriddles
 
 import io.reactivex.rxjava3.core.Maybe
+import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
 
 object Riddle35 {
@@ -10,6 +11,7 @@ object Riddle35 {
    * Use case: You have a local cache and only want to hit the network if the cache misses.
    */
   fun solve(first: Maybe<String>, second: Single<String>): Single<String> {
-    TODO()
+    //return first.toSingle().onErrorResumeNext { _ -> second }
+    return first.switchIfEmpty(second)
   }
 }
